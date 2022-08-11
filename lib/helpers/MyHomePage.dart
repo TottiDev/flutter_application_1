@@ -30,8 +30,16 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Prueba"),),
-      body: Center(child: Container(color: Colors.red,)),
-    );
+        appBar: AppBar(
+          title: Text("Prueba"),
+        ),
+        body: Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(32),
+            child: ElevatedButton(
+              style: ButtonStyle(),
+              child: Text("Bebidas"),
+              onPressed: () {},
+            )));
   }
 }
