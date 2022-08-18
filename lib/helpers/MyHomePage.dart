@@ -14,6 +14,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
+  double _screenHeight = 0.0;
+  double _screenWidth = 0.0;
 
   @override
   void initState() {
@@ -29,17 +31,25 @@ class _MyHomePageState extends State<MyHomePage>
 
   @override
   Widget build(BuildContext context) {
+    _screenHeight = MediaQuery.of(context).size.height;
+    _screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Prueba"),
+      appBar: AppBar(
+        title: Text("Prueba"),
+      ),
+      body: Container(
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(32),
+        child: ElevatedButton(
+          onPressed: () {},
+          child: Text("texto"),
+          style: ElevatedButton.styleFrom(
+              primary: Colors.yellow,
+              onPrimary: Colors.deepOrangeAccent,
+              padding: EdgeInsets.all(10.0),
+              minimumSize: Size(_screenHeight * 0.1, _screenWidth * 0.1)),
         ),
-        body: Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(32),
-            child: ElevatedButton(
-              style: ButtonStyle(),
-              child: Text("Bebidas"),
-              onPressed: () {},
-            )));
+      ),
+    );
   }
 }
