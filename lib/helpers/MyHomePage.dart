@@ -37,20 +37,39 @@ class _MyHomePageState extends State<MyHomePage>
       appBar: AppBar(
         title: Text("Prueba"),
       ),
-      body: opcion(), 
+      body: Stack(
+        children: [
+          Bebidas(),
+        ],
+      ),
     );
   }
-  Widget opcion(){
+
+  Widget Bebidas() {
     return Container(
+      alignment: const Alignment(0, 0),
       child: ElevatedButton(
-          onPressed: () {},
-          child: Text("texto"),
-          style: ElevatedButton.styleFrom(
-              primary: Colors.yellow,
-              onPrimary: Colors.deepOrangeAccent,
-              padding: EdgeInsets.all(10.0),
-              minimumSize: Size(_screenHeight * 0.1, _screenWidth * 0.1)),
-        )
+        onPressed: () {},
+        child: Text("texto"),
+        style: ElevatedButton.styleFrom(
+            primary: Colors.yellow,
+            onPrimary: Colors.deepOrangeAccent,
+            //padding: EdgeInsets.all(10.0),
+            minimumSize: Size(_screenHeight * 0.1, _screenWidth * 0.1)),
+      ),
     );
+  }
+
+  Widget Comidas() {
+    return Container(
+        child: ElevatedButton(
+      onPressed: () {},
+      child: Text("Comidas"),
+      style: ElevatedButton.styleFrom(
+          primary: Colors.yellow,
+          onPrimary: Colors.deepOrangeAccent,
+          //padding: EdgeInsets.all(10.0),
+          minimumSize: Size(_screenHeight * 0.1, _screenWidth * 0.1)),
+    ));
   }
 }
