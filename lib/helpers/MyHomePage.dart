@@ -37,10 +37,12 @@ class _MyHomePageState extends State<MyHomePage>
       appBar: AppBar(
         title: Text("Prueba"),
       ),
-      body: Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.all(32),
-        child: ElevatedButton(
+      body: opcion(), 
+    );
+  }
+  Widget opcion(){
+    return Container(
+      child: ElevatedButton(
           onPressed: () {},
           child: Text("texto"),
           style: ElevatedButton.styleFrom(
@@ -48,8 +50,7 @@ class _MyHomePageState extends State<MyHomePage>
               onPrimary: Colors.deepOrangeAccent,
               padding: EdgeInsets.all(10.0),
               minimumSize: Size(_screenHeight * 0.1, _screenWidth * 0.1)),
-        ),
-      ),
+        )
     );
   }
 }
