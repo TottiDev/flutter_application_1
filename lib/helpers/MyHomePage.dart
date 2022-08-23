@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/animation/animation_controller.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -49,11 +51,13 @@ class _MyHomePageState extends State<MyHomePage>
 
   Widget Bebidas() {
     return Container(
-      alignment: const Alignment(0, 1),
+      alignment: const Alignment(0, 0.8),
       child: ElevatedButton(
         onPressed: () {},
         child: Text("Bebidas"),
         style: ElevatedButton.styleFrom(
+            textStyle:
+                const TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
             primary: Colors.yellow,
             onPrimary: Colors.deepOrangeAccent,
             //padding: EdgeInsets.all(10.0),
@@ -69,6 +73,8 @@ class _MyHomePageState extends State<MyHomePage>
         onPressed: () {},
         child: Text("Comidas"),
         style: ElevatedButton.styleFrom(
+            textStyle:
+                const TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
             primary: Colors.yellow,
             onPrimary: Colors.deepOrangeAccent,
             //padding: EdgeInsets.all(10.0),
@@ -79,11 +85,13 @@ class _MyHomePageState extends State<MyHomePage>
 
   Widget Entradas() {
     return Container(
-      alignment: const Alignment(0, -1),
+      alignment: const Alignment(0, -0.8),
       child: ElevatedButton(
         onPressed: () {},
         child: Text("Entradas"),
         style: ElevatedButton.styleFrom(
+            textStyle:
+                const TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
             primary: Colors.yellow,
             onPrimary: Colors.deepOrangeAccent,
             //padding: EdgeInsets.all(10.0),

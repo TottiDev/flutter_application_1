@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/helpers/Entradas.dart';
+import 'package:flutter_application_1/helpers/Login.dart';
 import 'package:flutter_application_1/helpers/Lugar.dart';
-import 'package:flutter_application_1/helpers/login.dart';
 
 import 'helpers/MyHomePage.dart';
 
@@ -19,11 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Lugar(),
+      home: const Entradas(),
     );
   }
 }
-
-
-
-

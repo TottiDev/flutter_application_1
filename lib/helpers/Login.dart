@@ -3,6 +3,7 @@ import 'package:flutter/src/animation/animation_controller.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/ticker_provider.dart';
+import 'package:flutter_application_1/helpers/Lugar.dart';
 import 'package:flutter_application_1/helpers/MyHomePage.dart';
 
 class Login extends StatefulWidget {
@@ -12,8 +13,7 @@ class Login extends StatefulWidget {
   State<Login> createState() => _LoginState();
 }
 
-class _LoginState extends State<Login>
-    with SingleTickerProviderStateMixin {
+class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   double _screenHeight = 0.0;
   double _screenWidth = 0.0;
@@ -53,19 +53,17 @@ class _LoginState extends State<Login>
     return Container(
       alignment: const Alignment(0, 0),
       child: TextField(
-        decoration: InputDecoration(
-          border: OutlineInputBorder(),
-          labelText: 'Nombre'
-        ),
+        decoration:
+            InputDecoration(border: OutlineInputBorder(), labelText: 'Nombre'),
       ),
     );
   }
 
-  Widget UsuarioImagen(){
+  Widget UsuarioImagen() {
     return Container(
       alignment: const Alignment(-1, -1),
-      child: Image.network('https://cdn.dribbble.com/users/235461/screenshots/1992781/media/84f39ef8eaf58fd53abf9da6b7956815.gif'),
-
+      child: Image.network(
+          'https://cdn.dribbble.com/users/235461/screenshots/1992781/media/84f39ef8eaf58fd53abf9da6b7956815.gif'),
     );
   }
 
@@ -74,9 +72,7 @@ class _LoginState extends State<Login>
       alignment: const Alignment(0, 0.3),
       child: TextField(
         decoration: InputDecoration(
-          border: OutlineInputBorder(),
-          labelText: 'Dirección'
-        ),
+            border: OutlineInputBorder(), labelText: 'Dirección'),
       ),
     );
   }
@@ -86,7 +82,8 @@ class _LoginState extends State<Login>
       alignment: const Alignment(0.9, 0.9),
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>MyHomePage()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Lugar()));
         },
         child: Text("Siguiente"),
         style: ElevatedButton.styleFrom(

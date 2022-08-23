@@ -3,6 +3,7 @@ import 'package:flutter/src/animation/animation_controller.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/ticker_provider.dart';
+import 'package:flutter_application_1/helpers/MyHomePage.dart';
 
 class Lugar extends StatefulWidget {
   const Lugar({Key? key}) : super(key: key);
@@ -51,9 +52,12 @@ class _LugarState extends State<Lugar> with SingleTickerProviderStateMixin {
     return Container(
       alignment: const Alignment(-0.8, -0.8),
       child: Container(
-        alignment: const Alignment(0, 0),
+        //alignment: const Alignment(0, 0),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => MyHomePage()));
+          },
           child: Image.network(
               'https://images.unsplash.com/photo-1541086095944-f4b5412d3666?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'),
           style: ElevatedButton.styleFrom(
@@ -70,7 +74,10 @@ class _LugarState extends State<Lugar> with SingleTickerProviderStateMixin {
     return Container(
       alignment: const Alignment(0.8, -0.8),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => MyHomePage()));
+        },
         child: Image.network(
             'https://images.unsplash.com/photo-1606021511779-aae22948af3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'),
         style: ElevatedButton.styleFrom(
@@ -86,7 +93,10 @@ class _LugarState extends State<Lugar> with SingleTickerProviderStateMixin {
     return Container(
       alignment: const Alignment(-0.8, 0.8),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => MyHomePage()));
+        },
         child: Image.network(
             'https://images.unsplash.com/photo-1584536301769-0c5c357941db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'),
         style: ElevatedButton.styleFrom(
@@ -102,7 +112,10 @@ class _LugarState extends State<Lugar> with SingleTickerProviderStateMixin {
     return Container(
       alignment: const Alignment(0.8, 0.8),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => MyHomePage()));
+        },
         child: Image.network(
             'https://images.unsplash.com/photo-1589459985166-966c72e767d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'),
         style: ElevatedButton.styleFrom(
