@@ -4,14 +4,14 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/ticker_provider.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class Lugar extends StatefulWidget {
+  const Lugar({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<Lugar> createState() => _LugarState();
 }
 
-class _MyHomePageState extends State<MyHomePage>
+class _LugarState extends State<Lugar>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   double _screenHeight = 0.0;
@@ -52,12 +52,12 @@ class _MyHomePageState extends State<MyHomePage>
       alignment: const Alignment(0, 1),
       child: ElevatedButton(
         onPressed: () {},
-        child: Text("Bebidas"),
+        child: Image.network('https://pbs.twimg.com/profile_images/1380267041790300166/uXdEuQ_D_400x400.png'),
         style: ElevatedButton.styleFrom(
             primary: Colors.yellow,
             onPrimary: Colors.deepOrangeAccent,
             //padding: EdgeInsets.all(10.0),
-            minimumSize: Size(_screenHeight * 0.1, _screenWidth * 0.3)),
+            maximumSize: Size(_screenHeight * 0.3, _screenWidth * 0.3)),
       ),
     );
   }
