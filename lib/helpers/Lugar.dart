@@ -35,7 +35,7 @@ class _LugarState extends State<Lugar> with SingleTickerProviderStateMixin {
     _screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Selecciona tu pedido"),
+        title: Text("Selecciona el lugar"),
       ),
       body: Stack(
         children: [
@@ -56,7 +56,7 @@ class _LugarState extends State<Lugar> with SingleTickerProviderStateMixin {
         child: ElevatedButton(
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => MyHomePage()));
+                context, MaterialPageRoute(builder: (context) => const MyHomePage()));
           },
           child: Image.network(
               'https://images.unsplash.com/photo-1541086095944-f4b5412d3666?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'),

@@ -7,14 +7,14 @@ import 'package:flutter_application_1/helpers/MyHomePage.dart';
 import 'package:flutter_application_1/helpers/Gracias.dart';
 
 
-class Entradas extends StatefulWidget {
-  const Entradas({Key? key}) : super(key: key);
+class Comidas extends StatefulWidget {
+  const Comidas({Key? key}) : super(key: key);
 
   @override
-  State<Entradas> createState() => _EntradasState();
+  State<Comidas> createState() => _ComidasState();
 }
 
-class _EntradasState extends State<Entradas>
+class _ComidasState extends State<Comidas>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   double _screenHeight = 0.0;
@@ -42,7 +42,7 @@ class _EntradasState extends State<Entradas>
       ),
       body: Stack(
         children: [
-          EntradasRow(),
+          ComidasRow(),
           Siguiente(),
         ],
       ),
@@ -67,7 +67,7 @@ class _EntradasState extends State<Entradas>
     );
   }
 
-  Widget EntradasRow() {
+  Widget ComidasRow() {
     return Container(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -78,7 +78,7 @@ class _EntradasState extends State<Entradas>
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "Entrada 1",
+                "Comida 1",
                 style: TextStyle(color: Colors.white, fontSize: 25),
               ),
             ),
@@ -89,7 +89,7 @@ class _EntradasState extends State<Entradas>
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "Entrada 2",
+                "Comida 2",
                 style: TextStyle(color: Colors.white, fontSize: 25),
               ),
             ),
@@ -100,7 +100,7 @@ class _EntradasState extends State<Entradas>
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "Entrada 3",
+                "Comida 3",
                 style: TextStyle(color: Colors.white, fontSize: 25),
               ),
             ),
@@ -111,7 +111,7 @@ class _EntradasState extends State<Entradas>
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "Entrada 4",
+                "Comida 4",
                 style: TextStyle(color: Colors.white, fontSize: 25),
               ),
             ),
@@ -122,7 +122,7 @@ class _EntradasState extends State<Entradas>
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "Entrada 5",
+                "Comida 5",
                 style: TextStyle(color: Colors.white, fontSize: 25),
               ),
             ),
@@ -133,7 +133,7 @@ class _EntradasState extends State<Entradas>
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "Entrada 6",
+                "Comida 6",
                 style: TextStyle(color: Colors.white, fontSize: 25),
               ),
             ),

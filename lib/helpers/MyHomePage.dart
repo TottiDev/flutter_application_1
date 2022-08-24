@@ -5,6 +5,12 @@ import 'package:flutter/src/animation/animation_controller.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/ticker_provider.dart';
+import 'package:flutter_application_1/helpers/Bebidas.dart';
+import 'package:flutter_application_1/helpers/Comidas.dart';
+import 'package:flutter_application_1/helpers/Entradas.dart';
+
+
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -41,19 +47,22 @@ class _MyHomePageState extends State<MyHomePage>
       ),
       body: Stack(
         children: [
-          Bebidas(),
-          Comidas(),
-          Entradas(),
+          Bebidass(),
+          Comidass(),
+          Entradass(),
         ],
       ),
     );
   }
 
-  Widget Bebidas() {
+  Widget Bebidass() {
     return Container(
       alignment: const Alignment(0, 0.8),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) =>  const Bebidas()));
+        },
         child: Text("Bebidas"),
         style: ElevatedButton.styleFrom(
             textStyle:
@@ -66,11 +75,14 @@ class _MyHomePageState extends State<MyHomePage>
     );
   }
 
-  Widget Comidas() {
+  Widget Comidass() {
     return Container(
       alignment: const Alignment(0, 0),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) =>  const Comidas()));
+        },
         child: Text("Comidas"),
         style: ElevatedButton.styleFrom(
             textStyle:
@@ -83,11 +95,14 @@ class _MyHomePageState extends State<MyHomePage>
     );
   }
 
-  Widget Entradas() {
+  Widget Entradass() {
     return Container(
       alignment: const Alignment(0, -0.8),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) =>  const Entradas()));
+        },
         child: Text("Entradas"),
         style: ElevatedButton.styleFrom(
             textStyle:
